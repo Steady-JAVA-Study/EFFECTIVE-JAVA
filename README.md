@@ -1,8 +1,6 @@
 # EFFECTIVE-JAVA
 ☑EFFECTIVE JAVA 내용을 함께 정리해나가는 레포지토리입니다.☑
 
-# BASIC-JAVA
-☑이펙티브 자바를 읽고 정리해나가는 공간입니다☑
 # JAVA Study
 ### `JAVA 개념 꽉 JAVA`
 > Since 2022.05.07
