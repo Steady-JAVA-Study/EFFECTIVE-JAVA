@@ -7,31 +7,30 @@
   - [Collaborator](#collaborator)
   - [Reference](#reference)
 
-### `스터디 진행 상황`
+### `스터디 진행 상황` ☑
 - [이펙티브 자바](first-study)
 
-1주차 (05.13) :: Chapter 1 자바를 시작하기 전 ☑
-1주차 (05.13) :: Chapter 2 변수(Variable) ☑
+1주차 (07.08) :: Chapter 2 객체 생성과 파괴
 
-2주차 (05.19) :: Chapter 3 연산자(Operator) ☑
-2주차 (05.19) :: Chapter 4 조건문과 반복문 ☑
+2주차 (07.15) :: Chapter 3 모든 객체의 공통 메서드
 
-3주차 (05.26) :: Chapter 5 배열(Array) ☑
+3주차 (07.22) :: Chapter 4 클래스와 인터페이스
 
-4주차 (06.02) :: Chapter 6 객체지향 프로그래밍 I
+4주차 (07.29) :: Chapter 5 제너릭
 
-5주차 (06.09) :: Chapter 7 객체지향 프로그래밍 II
+5주차 (08.05) :: Chapter 6 열거 타입과 애너테이션
 
-6주차 (06.17) :: Chapter 8 예외처리(Exception Handling)
-6주차 (06.17) :: Chapter 9 java.lang패키지와 유용한 클래스
+6주차 (08.12) :: Chapter 7 람다와 스트림
 
-7주차 (06.23) :: Chapter 10 날짜와 시간 & 형식화
-7주차 (06.23) :: Chapter 11 컬렉션 프레임워크
+7주차 (08.19) :: Chapter 8 메서드
 
-8주차 (06.30) :: Chapter 12 지네릭스, 열거형, 애너테이션
+8주차 (08.26) :: Chapter 9 일반적인 프로그래밍 원칙
 
-9주차 (07.07) :: Chapter 13 쓰레드(Thread)
-9주차 (07.07) :: Chapter 14 람다와 스트림
+9주차 (09.02) :: Chapter 10 예외
+
+10주차 (09.09) :: Chapter 11 동시성
+
+11주차 (09.16) :: Chapter 12 직렬화
 
 ### Collaborator
 
