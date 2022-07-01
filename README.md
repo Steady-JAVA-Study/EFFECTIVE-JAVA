@@ -47,3 +47,24 @@
 </table>
 
 </p>
+
+
+### Repository-Rule
+ <br>
+ 
+- **Branch naming convention** : <br>
+   - 자신의 이름으로 branch를 만듭시다!
+   - => git branch `자신의 이름` 
+ <br>
+ 
+- **Commit convention rule** : <br>
+   - => `성명 : n주차 학습 내용 정리` 
+   - (ex) `김동윤 : 1주차 학습 내용 정리` 
+ <br>
+ 
+- **Pull Request rule** : <br>
+   - `Pull Request` 제목 : `김동윤 : n주차 내용 정리 `
+      - (ex) `김동윤 n주차 내용 정리`<br><br>
+
+ <br> 
+
