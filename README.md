@@ -2,7 +2,7 @@
 ☑EFFECTIVE JAVA 내용을 함께 정리해나가는 레포지토리입니다.☑
 
 > Since 2022.07.01
-  - <a href="https://ocean-dongyun.notion.site/EFFECTIVE-JAVA-5b64b5de403544d7a4c8aaad280e961f"></a>
+  - <a href="https://ocean-dongyun.notion.site/EFFECTIVE-JAVA-5b64b5de403544d7a4c8aaad280e961f">노션</a>
   - [Repository Rule](#repository-rule)
   - [Collaborator](#collaborator)
   - [Reference](#reference)
