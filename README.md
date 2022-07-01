@@ -42,7 +42,7 @@
         <td align="center"><a href="https://github.com/"><img src="https://github.com/.png" width="100px;" alt=""/><br /><sub><b><br/></b></sub></a></td>
         <td align="center"><a href="https://github.com/myway00"><img src="https://github.com/myway00.png" width="100px;" alt=""/><br /><sub><b><br/>김동윤</b></sub></a></td>
                 <td align="center"><a href="https://github.com/bong01"><img src="https://github.com/bong01.png" width="100px;" alt=""/><br /><sub><b><br/>이규봉</b></sub></a></td>
-               <td align="center"><a href="https://github.com/yoon-youngjin"><img src="https://github.com/yoon-youngjin.png" width="100px;" alt=""/><br /><sub><b><br/></b></sub></a></td>
+               <td align="center"><a href="https://github.com/yoon-youngjin"><img src="https://github.com/yoon-youngjin.png" width="100px;" alt=""/><br />윤영진<sub><b><br/></b></sub></a></td>
   </a></td>
    </tr>
 </table>
