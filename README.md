@@ -57,8 +57,8 @@
  <br>
  
 - **Commit convention rule** : <br>
-   - => `성명 : n주차 학습 내용 정리` 
-   - (ex) `김동윤 : 1주차 학습 내용 정리` 
+   - => `성명 : `챕터명` 학습 내용 정리` 
+   - (ex) `김동윤 : Chapter 2 객체 생성과 파괴 학습 내용 정리` 
  <br>
  
 - **Pull Request rule** : <br>
