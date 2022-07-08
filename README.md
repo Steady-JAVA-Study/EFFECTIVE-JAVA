@@ -62,8 +62,8 @@
  <br>
  
 - **Pull Request rule** : <br>
-   - `Pull Request` 제목 : `김동윤 : n주차 내용 정리 `
-      - (ex) `김동윤 n주차 내용 정리`<br><br>
+   - `Pull Request` 제목 : `김동윤 : `챕터명` 내용 정리 `
+      - (ex) `김동윤 :  `챕터명` 내용 정리`<br><br>
 
  <br> 
 
