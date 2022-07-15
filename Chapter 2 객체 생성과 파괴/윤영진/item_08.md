@@ -42,7 +42,6 @@ public class SampleRunner {
 
 Java에서 자원 반납은 `finalizer`가 아닌 `try-with-resource` 또는 `try-finally`을 이용하자!  
 
-
 자바 9에서는 finalizer를 사용 자제(deprecated) API로 지정하고 cleaner를 그 대안으로 소개했다. **cleaner는 finalizer보다는 덜 위험하지만, 여전히 예측할 수 없고, 느리고, 일반적으로 불필요하다.**
 
 
