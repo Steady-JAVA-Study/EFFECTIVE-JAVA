@@ -106,6 +106,7 @@ cache.put(key1, value1);
 > 약한 참조: 약한 참조는 GC가 발생하면 무조건 수거된다. WeakReference가 사라지는 시점이 GC의 실행 주기와 일치하며 이를 이용하여 짧은 주기에 자주 사용되는 객체를 캐시할 때 유용하다.
 >
 > https://ktko.tistory.com/entry/%EC%9E%90%EB%B0%94-%EA%B0%95%ED%95%9C%EC%B0%B8%EC%A1%B0Strong-Reference%EC%99%80-%EC%95%BD%ED%95%9C%EC%B0%B8%EC%A1%B0Weak-Reference
+
 ---
 
 ## WeakHashMap
