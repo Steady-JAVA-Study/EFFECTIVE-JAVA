@@ -49,4 +49,4 @@ public class PysicalConstants{
 - 상수 공개용 수단으로 사용 X
 
 ## 출처
-https://dahye-jeong.gitbook.io/java/java/effective_java/2021-02-13-use-interface-to-define-type
+https://dahye-jeong.gitbook.io/java/java/effective_java/2021-02-13-use-interface-to-define-type<br>
