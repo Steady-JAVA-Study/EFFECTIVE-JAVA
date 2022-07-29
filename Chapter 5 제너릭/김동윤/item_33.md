@@ -77,8 +77,8 @@ Java cafebabe com.github.sejoung.codetest.generics.Favorites
 => 따라서 Favorites는 타입 안전 이종 컨테이너
 
 - 이 방식이 동작하는 이유 :
-   - class의 클래스가 제네릭!
-   - class 리터럴 타입은 Class 가 아닌 Class<T> 이다.
+   - .class의 클래스가 제네릭!
+   - class 리터럴 타입(뒤에서 나올 타입 토큰,  타입을 나타내는 토큰) 은 `Class` 가 아닌 `Class<T>` 이다.
   
 ```
 String.class의 타입 <=> Class<String> 
@@ -89,6 +89,7 @@ Integer.class의 타입 <=> Class<Integer>
   ### 타입 토큰 ! 
   - 컴파일타임 타입 정보와 런타임 타입 정보를 위해 메소드에서 주고 받는 class 리터럴 IS REFERED AS 타입 토큰 ! 
 - **타입 토큰**(Type Token) =>  쉽게 말해 타입을 나타내는 토큰
+- 컴파일타임 타입 정보와 런타임 타입 정보를 알아내기 위해 메서드들이 주고받는 class 리터럴을 타입 토큰(type token)
 - 클래스 리터럴이 타입 토큰으로서 사용된다.
 (ex. Integer.class, String.class 는 class 리터럴이며 타입토큰은 `Class<Integer>`, `Class<String>`)
  
@@ -124,12 +125,13 @@ public class Favorites{
 - Class 의 **cast 메서드** 통해 객체 잠조를 Class 객체가 가리키는 타입으로 동적 형변환
   
 ### cast : 형변환 연산자의 동적 버전
-> 주어진 인수가 Class 객체가 알려주는 타입의 인스턴스인지 검사 후 
+> - 주어진 인수가 Class 객체가 알려주는 타입의 인스턴스인지 검사 후 
 맞으면 인스턴스 반환, 아니라면 ClassCastException 
+
   
 ```java
   
-public T cast(Object obj) {
+public T cast(Object obj) { //cast의 반환 타입은 Class 객체의 타입 매개변수와 the samg
     if (obj != null && !isInstance(obj))
         throw new ClassCastException(cannotCastMsg(obj));
     return (T) obj;  
@@ -143,14 +145,14 @@ public T cast(Object obj) {
   
 ## FAVORITE 제약 
   
-### 1)  악의적인 클라이언트가 Class 객체를 제네릭이 아닌 _raw 타입_으로 넘기면 Favorites 인스턴스의 타입 안정성이 깨진다.
+### 1)  악의적인 클라이언트가 Class 객체를 제네릭이 아닌 _raw 타입_(제네릭 명시 x) 으로 넘기면 Favorites 인스턴스의 타입 안정성이 깨진다.
 
 ```java
-f.putFavorites ((Class)Integer.class, "Integer의 인스턴스가 아닙니다.");
+f.putFavorites ((Class)Integer.class, "Integer의 인스턴스가 아닙니다.");// 다른 아이가 넘어가지만 알아채지 못하지 
 int favoritesInteger = f.getFavorite(Integer.Class);
 ```
 - putFavorites를 호출 => 아무 문제 x
-- getFavorite를 호출 => ClassCastException
+- getFavorite를 호출 => ClassCastException //런타임 때 파바바방 
 
 => Favorites가 타입 불변식을 어기는 일이 없도록 보장하려면 동적 형변환 use ! 
 
@@ -163,7 +165,7 @@ public <T> void putFavorite(Class<T> type, T instance){
 
   
   
-### 2) 실체화 불가 타입에는 Favorites 클래스를 사용 X
+### 2) 실체화 불가 타입(제네릭) 에는 Favorites 클래스를 사용 X
 -  String 이나 String[]은 사용할 수 있어도 
 - List<String>이나 List<Integer>는 저장할 수 없다는 이야기  
   
@@ -172,7 +174,7 @@ public <T> void putFavorite(Class<T> type, T instance){
 - List<String>를 저장하려고 해도 컴파일 X
 - List<String>용 Class 객체를 얻을 수 없기 때문
 =>  (List<String>.class -> 문법 오류가 난다)
-- 이유 : List<String> 이나 List<Integer> 나 List.class라는 같은 Class 객체를 공유 ;; 
+- 이유 : List<String> 이나 List<Integer> 나 List.class라는 같은 Class 객체를 공유하기 때문이야~ ;; 
 
 ## and ~~ 한정적 타입 토큰 : 타입 토큰  제한하고 싶을 때
 - Favorites가 사용하는 타입 토큰은 비한정 적이므로, 어떤 Class 객체든 받아들인다. 
