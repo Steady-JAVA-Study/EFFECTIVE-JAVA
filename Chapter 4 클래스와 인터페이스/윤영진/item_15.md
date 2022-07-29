@@ -96,7 +96,7 @@ public class Post {
 
 --- 
 
-## 문제 상황
+## 번외
 
 `public static final Thing[] VALUES = {...}` final이지만 배열은 주소를 참조하므로 변경이 가능해진다.
 
