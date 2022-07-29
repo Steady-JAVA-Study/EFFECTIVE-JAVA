@@ -167,11 +167,11 @@ public <T> void putFavorite(Class<T> type, T instance){
   
 ### 2) 실체화 불가 타입(제네릭) 에는 Favorites 클래스를 사용 X
 -  String 이나 String[]은 사용할 수 있어도 
-- List<String>이나 List<Integer>는 저장할 수 없다는 이야기  
+-` List<String>`이나 `List<Integer>`는 저장할 수 없다는 이야기  
   
 <br>
 
-- List<String>를 저장하려고 해도 컴파일 X
+- `List<String>`를 저장하려고 해도 컴파일 X
 - List<String>용 Class 객체를 얻을 수 없기 때문
 =>  (List<String>.class -> 문법 오류가 난다)
 - 이유 : List<String> 이나 List<Integer> 나 List.class라는 같은 Class 객체를 공유하기 때문이야~ ;; 
