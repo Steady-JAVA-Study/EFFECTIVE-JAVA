@@ -36,7 +36,7 @@ ________________________________________________________
 ## 제네릭타입의 가변인수 메서드를 호출하면 어케 되냐?
 
 ```java
-    public static void main(String[] args) {
+static void dangerous(List<String>... stringLists) {
         List<String>[] stringLists = new List<String>[1]; // (1)
         List<Integer> intList = List.of(42); // (2)
         Object[] objects = stringLists; // (3)
