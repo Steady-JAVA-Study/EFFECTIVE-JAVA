@@ -42,7 +42,7 @@ public static <T> List<T> asList(T... a) {
         }
 ```
 
-`Arrays.asList(T... a)`, `Collections.addAll(Collection<? super T> c, T... elements)`, E`numSet.of(E first, E... reset)` , ... 메서드가 typesafe 한 경우에 한해서 잘 쓰면 유용한데, 잘못쓰면 ClassCastException을 발생시킬 수 있다.
+`Arrays.asList(T... a)`, `Collections.addAll(Collection<? super T> c, T... elements)`, EnumSet.of(E first, E... reset)` , ... 메서드가 typesafe 한 경우에 한해서 잘 쓰면 유용한데, 잘못쓰면 ClassCastException을 발생시킬 수 있다.
 
 ### 가변인자로 제네릭을 사용하고 있지만 type-safe 한 메서드란?
 
