@@ -134,6 +134,25 @@ public E pop() {
 
 첫 번째 방법의 경우 가독성이 좋으며 캐스팅을 배열 생성 시 단 한 번만 해주면 된다는 장점을 가지고 있다.
 
+### 힙 오염(Heap Pollution)?
+```java
+ArrayList<String> arrayList = new ArrayList<>();
+arrayList.add("String1");
+arrayList.add("String2");
+
+Object obj = arrayList;
+```
+
+```java
+ArrayList<Integer> arrayList2 = (ArrayList<Integer>)obj;
+arrayList2.add(new Integer(100));
+arrayList2.add(new Integer(200));
+```
+
+컴파일러는 위의 코드의 오류를 파악하지 못하고 컴파일에 성공하게 된다.
+동일한 ArrayList에 서로 상속관계도 아닌 두 타입의 객체가 들어가게 되는 것을 힙오염이라고 한다.
+
+
 ## 결론 
 클라이언트에서 직접 형변환해야 하는 타입보다 제네릭 타입이 더 안전하고 쓰기 편하다.
 
