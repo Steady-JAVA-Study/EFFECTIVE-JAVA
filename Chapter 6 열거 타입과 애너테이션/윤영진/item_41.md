@@ -21,9 +21,9 @@ Serialize 인터페이스는 자신을 구현한 인스턴스는 ObjectOutPutStr
 ## 마커 애너테이션(marker annotation)
 
 > 마커 애너테이션?
-> 
+>
 > 멤버변수 없이 단순히 대상에 마킹하는 어노테이션
-> 
+>
 > ex. @Override
 
 ### 마커 인터페이스 vs 마커 애너테이션
