@@ -15,6 +15,9 @@
 - So, 병렬 스트림을 이용하면 멀티 코어 프로세서가 각각의 청크를 처리하도록 할당 가능
 - 병렬스트림 내부에서 포크/조인 프레임워크를 활용
 
+![image](https://user-images.githubusercontent.com/76711238/184495816-3ae4f940-5126-4a3c-800a-f4fcc29d234a.png)
+![image](https://user-images.githubusercontent.com/76711238/184495834-80ccbd13-aaaf-42cf-b755-ac28e5895d96.png)
+그림 출처 : https://wonyong-jang.github.io/java/2021/02/07/Java-Stream-parallel.html
 
 # 스트림 병렬화는 주의해서 적용하라
 - Java8부터는 parallel 메서드만 호출하면 파이프라인을 병렬 실행할 수 있는 스트림을 지원
