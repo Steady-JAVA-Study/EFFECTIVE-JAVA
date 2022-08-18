@@ -36,24 +36,25 @@ user.stream() // 스트림 생성
 
 ### 종단 연산(Terminal operation)
 
--   **forEach(Consumer<? super T> consumer)**  : Stream의 요소를 순회
+- **forEach(Consumer<? super T> consumer)**  : Stream의 요소를 순회
 
--   **count()**  : 스트림 내의 요소 수 반환
+- **count()**  : 스트림 내의 요소 수 반환
 
--   **max(Comparator<? super T> comparator)**  : 스트림 내의 최대 값 반환
+- **max(Comparator<? super T> comparator)**  : 스트림 내의 최대 값 반환
 
--   **min(Comparator<? super T> comparator)**  : 스트림 내의 최소 값 반환
+- **min(Comparator<? super T> comparator)**  : 스트림 내의 최소 값 반환
 
--   **allMatch(Predicate<? super T> predicate)**  : 스트림 내에 모든 요소가 predicate 함수에 만족할 경우 true
+- **allMatch(Predicate<? super T> predicate)**  : 스트림 내에 모든 요소가 predicate 함수에 만족할 경우 true
 
--   **anyMatch(Predicate<? super T> predicate)**  : 스트림 내에 하나의 요소라도 predicate 함수에 만족할 경우 true
+- **anyMatch(Predicate<? super T> predicate)**  : 스트림 내에 하나의 요소라도 predicate 함수에 만족할 경우 true
 
--   **noneMatch(Predicate<? super T> predicate)**  : 스트림 내에 모든 요소가 predicate 함수에 만족하지않는 경우 true
+- **noneMatch(Predicate<? super T> predicate)**  : 스트림 내에 모든 요소가 predicate 함수에 만족하지않는 경우 true
 
--   **sum()**  : 스트림 내의 요소의 합 (IntStream, LongStream, DoubleStream)
+- **sum()**  : 스트림 내의 요소의 합 (IntStream, LongStream, DoubleStream)
 
--   **average()**  : 스트림 내의 요소의 평균 (IntStream, LongStream, DoubleStream)
--  **collect()** :  스트림 인터페이스에 대해서 list나 set으로 변경 
+- **average()**  : 스트림 내의 요소의 평균 (IntStream, LongStream, DoubleStream) 
+
+- **collect()** :  스트림 인터페이스에 대해서 list나 set으로 변경 
 
 ## 종단 연산(terminate operation)을 빼먹는 일이 절대 없도록 하자.
 

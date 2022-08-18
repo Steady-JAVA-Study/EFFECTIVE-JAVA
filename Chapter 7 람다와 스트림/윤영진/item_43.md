@@ -52,6 +52,7 @@ default V merge(K key, V value,
 해당 메서드는 key 값을 받아 key가 map안에 없다면 value 값을 (key, value) 쌍으로 저장하고, key가 map안에 있다면 value 값을 BiFunction#apply 메서드에 적용해, (key, BiFunction#apply 메서드의 결과) 쌍으로 저장한다.
 
 ### 익명 클래스
+
 ```java
 Map<String, Integer> map = new HashMap();
 
