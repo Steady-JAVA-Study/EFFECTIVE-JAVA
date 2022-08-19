@@ -38,6 +38,31 @@ public class Item44 {
 ```
 
 ```java
+@FunctionalInterface
+public interface EldestEntryRemovalFunction<K, V> {
+    boolean remove(Map<K, V> map, Map.Entry<K, V> eldest);
+}
+
+public static class Cache<K, V> extends LinkedHashMap<K, V> {
+
+    private final EldestEntryRemovalFunction<K, V> eldestEntryRemovalFunction;
+
+    public Cache(EldestEntryRemovalFunction<K, V> eldestEntryRemovalFunction) {
+        this.eldestEntryRemovalFunction = eldestEntryRemovalFunction;
+    }
+
+    @Override
+    protected boolean removeEldestEntry(Map.Entry<K, V> eldest) {
+        return eldestEntryRemovalFunction.remove(this, eldest);
+    }
+}
+
+Cache<String, Integer> cache = new Cache<>((map1, eldest) -> map1.size() > 3);
+
+
+```
+
+```java
 
 public class Item44 {
     public static void main(String[] args) throws IOException {
@@ -65,6 +90,7 @@ public class Item44 {
             return biPredicate.test(this, eldest);
         }
     }
+    Cache<String, Integer> cache = new Cache<>((stringIntegerMap, stringIntegerEntry) -> stringIntegerMap.size() > 3);
 
 }
 
