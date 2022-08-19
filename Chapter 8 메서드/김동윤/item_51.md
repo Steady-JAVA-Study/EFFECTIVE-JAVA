@@ -18,13 +18,14 @@ List<String> list = Lists.of("a", "b", "c", "d");
 
 List<String> newList = list.subList(1, 3);
 int index = newList.indexOf("b"); // 0
-출처: https://gona.tistory.com/73 [건강한개발자:티스토리]
+
 ```
 - (EX) 리스트에서 지정된 범위의 부분 리스트에서 특정 요소를 찾는다고 가정
 - 이 기능을 하나의 메서드로 구현하려면 리스트의 시작과 끝 그리고 찾을 요소까지 총 3개의 매개변수가 필요
 - 하지만 두 개의 메서드 (부분 리스트, 특정 인덱스 찾기)로 나누면 위와 같이 매개변수를 각 메서드에 2개 1개로 나누기 가능 
 
 ## 2) 매개변수를 묶어주는 도우미 클래스를 만든다.
+
 ```java
 // 기존 메서드
 public void someMethod(String name, String address, String email, String job) {
@@ -60,6 +61,7 @@ public void someMethod(SomeHelper someHelper) {
 4) 해당 객체를 넘겨 원하는 계산 수행
 
 ```
+
 # 매개변수의 타입으로는 클래스보다는 인터페이스가 더 낫다.
 - 매개변수로 적합한 인터페이스가 존재한다면 인터페이스를 직접 사용 
 - (EX) 메서드에 HashMap을 넘기지 말고  Map을 넘겨라. 그러면 HashMap 뿐만 아니라 다른 Map 구현체도 인수로 건넬 수 있다.
@@ -67,7 +69,6 @@ public void someMethod(SomeHelper someHelper) {
 
 # boolean보다는 원소 2개짜리 열거 타입이 낫다.
 
-```java
 
 ```java
 public enum TemperatureScale {FARENHEIT, CELSIUS} 
@@ -80,7 +81,7 @@ Thermometer.newInstance(TemperatureScale.CELSIUS);
 
 - 온도계 클래스가 있다고 가정
 - TemperatureScale(true) 보다 TemperatureScale.newInstance(TemperatureScale.CELSIUS)가 하는 일을 명확히 알려줌
-`
+
 
 ## 결론 
 - 메서드 이름을 신중히 
