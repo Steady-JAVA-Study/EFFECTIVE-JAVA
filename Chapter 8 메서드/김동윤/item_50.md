@@ -62,7 +62,7 @@
   //      this.start = start; # 이전에는 직접 대입 
   //      this.end   = end;
   //  }
-
+# 접근자가 가변 필드의 방어적 복사본을 반환하게 하면 된다.
 # 필드의 방어적 복사본을 반환 
     public Date start() {
         return new Date(start.getTime());
