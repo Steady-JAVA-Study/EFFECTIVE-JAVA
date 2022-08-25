@@ -60,6 +60,8 @@ Optional<E> max(Collection<E> c) {
 }
 ```
 
++ Optional.of(value)에 null을 넣으면 NPE가 발생하므로 null 값도 허용하는 옵셔널을 만들기 위해서는 Optional.ofNullable(value)를 사용하면 된다.
+
 ### 메서드가 옵셔널을 반환한다면 클라이언트는 값을 받지 못했을 때 취할 행동
 
 1. 기본 값을 정해둘 수 있다.
@@ -78,7 +80,8 @@ Element lastNobleGas = max(Elements.NOBLE_GASES).get();
 ```
 - 옵셔널에 항상 값이 없다면 NoSuchElementException이 발생
 
-4. 기본 값 설정 비용이 클 경우
+--- 
+## 기본 값 설정 비용이 클 경우
 
 ```text
 public T orElse(T other)
@@ -98,7 +101,7 @@ public static String orElseGetBenchmark() {
 
 Supplier<T>를 인수로 받는 orElseGet을 사용하면 초기 설정 비용을 낮출 수 있다.
 
-5. isPresent
+## isPresent
 
 안전 벨브 역할의 메서드로, 옵셔널이 채워져 있으면 true를, 비어 있으면 false를 반환한다.
 
@@ -123,17 +126,28 @@ public class ParentPid {
 
 ### Stream 사용할 경우
 
-```text
-streamOfOptionals
-    .filter(Optional::isPresent)
-    .map(Optional::get)
-```
-
 자바 9부터는 Optional을 stream으로 반환해주는 Optional.stream() 메서드가 추가되었다. 이 메서드는 Optioanl을 Stream으로 변환해주는 어댑터다. Optional에 값이 있으면 그 값을 원소로 담은 스트림으로, 값이 없다면 빈 스트림으로 반환한다. 이를 Stream의 flatMap 메서드와 조합하면 아래와 같이 바꿀 수 있다.
 
 ```text
 streamOfOptionals.flatMap(Optional::stream)
 ```
+
+```text
+streamOfOptionals
+    .filter(Optional::isPresent)
+    .map(Optional::get)
+
+List<String> result = List.of(Optional.of("ABCD"), Optional.of("ABCC"), Optional.of("XVCD"))
+                .stream().flatMap(Optional::stream)
+                .filter(v -> v.startsWith("AB"))
+                .collect(Collectors.toList());
+    
+List<String> result = Stream.of(Optional.of("ABCD"), Optional.of("ABCC"), Optional.of("XVCD")).flatMap(Optional::stream)
+                .filter(v -> v.startsWith("AB"))
+                .collect(Collectors.toList());
+```
+
+
 
 ### Optional 주의사항
 
