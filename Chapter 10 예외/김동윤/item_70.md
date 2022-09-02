@@ -1,6 +1,5 @@
 # 복구할 수 있는 상황에는 검사 예외를, 프로그래밍 오류에는 런타임 예외를 사용하라
-![](https://velog.velcdn.com/images/myway00/post/ed7b975e-1d2e-4c5c-9677-72d5f4819680/image.png)
-
+![image](https://user-images.githubusercontent.com/76711238/188154655-aa627094-2c9a-4a41-886a-ac871c0689cd.png)
 - 자바는 문제 상황을 알리는 타입(Throwable)으로 검사 예외, 런타임 예외, 에러 이렇게 세 가지를 제공
 - 해당 타입을 언제 무엇을 사용해야하는 지 헷갈리는 경우 있음
 
@@ -37,8 +36,9 @@ ____________
 ## 에러는 보통 JVM이 자원부족, 불변식 깨짐 등 더 이상 수행을 계속할 수 없는 상황일 때 사용
 - 자바 언어의 널리 퍼진 규약으로 Error 클래스를 상속해 하위 클래스를 만드는 일을 자제하는 것이 좋다. 다시 말해서, 우리가 구현하는 비검사 throwble은 모두 RuntimeException의 하위 클래스여야 한다. (굳이 정의하지 말고 상속해서 쓰라는 말로 이해함)
 
-- Exception, RuntimeException, Error를 상속하지 않은 throwble을 만들 수 있는데 이런, throwable은 이로울 게 없으니 절대 사용하지 말아라. 이런 throwable은 예외보다 나을 게 없으며 API 사용자를 헷갈리게 할 뿐이다.
-
+- Exception, RuntimeException, Error를 상속하지 않은 throwble을 만들 수 있는데 이런 throwable은 이로울 게 없으니 절대 사용X
+- 이런 throwable은 예외보다 나을 게 없으며 API 사용자를 헷갈리게 할 뿐이다.
+=> 예외, 런타임 예외, 에러를 상속한 throwble 을 구현하고 괜히 뭐 만들지 말아라~ 헷갈리게만 만들뿐
 __________________
 
 - 하지만 실제로 해당 상황이 복구가 가능한 상황인지 아닌지는 판단하기 어렵, 실상 API 설계자의 판단에 달렸다.
