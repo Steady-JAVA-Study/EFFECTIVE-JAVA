@@ -13,6 +13,7 @@
 
 호출자가 인수로 부적절한 값을 넘길 때 던지는 예외
 
+ex. 양수를 넣어줘야 하는데 음수를 넣은 경우
 ```java
 public class MainRunner {
   
